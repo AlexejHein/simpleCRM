@@ -16,8 +16,12 @@ import { MatDialogModule} from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import {MatNativeDateModule} from "@angular/material/core";
-import {FormsModule} from "@angular/forms";
+import { MatNativeDateModule} from "@angular/material/core";
+import { FormsModule} from "@angular/forms";
+import { environment } from '../environments/environments';
+import { AngularFireStorageModule} from "@angular/fire/compat/storage";
+import {AngularFireModule} from "@angular/fire/compat";
+import firebase from "firebase/compat";
 
 @NgModule({
   declarations: [
@@ -40,7 +44,9 @@ import {FormsModule} from "@angular/forms";
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

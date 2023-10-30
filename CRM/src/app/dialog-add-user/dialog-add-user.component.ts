@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {User} from "../../models/user.class";
 import {AngularFirestore} from "@angular/fire/compat/firestore";
+import {MatDialogRef} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-dialog-add-user',
@@ -9,16 +10,25 @@ import {AngularFirestore} from "@angular/fire/compat/firestore";
 })
 export class DialogAddUserComponent {
   user = new User();
-  constructor(private firestore: AngularFirestore) { }
+  loading = false;
+  constructor(public dialogRef: MatDialogRef<DialogAddUserComponent>, private firestore: AngularFirestore) { }
 
 
 
 
   saveUser(){
-    console.log(this.user);
-
-    this.firestore.collection('users').add(this.user.toJSON()).then(r => {
+    this.loading = true;
+    this.firestore
+      .collection('users')
+      .add(this.user.toJSON())
+      .then(r => {
+        this.loading = false;
       console.log(r);
     });
+    this.dialogRef.close();
   }
+
+
+
+  protected readonly close = close;
 }

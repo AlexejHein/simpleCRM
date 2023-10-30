@@ -21,6 +21,8 @@ import { FormsModule} from "@angular/forms";
 import { environment } from '../environments/environments';
 import { AngularFireStorageModule} from "@angular/fire/compat/storage";
 import {AngularFireModule} from "@angular/fire/compat";
+import { MatProgressBarModule} from "@angular/material/progress-bar";
+import { MatCardModule } from "@angular/material/card";
 import firebase from "firebase/compat";
 
 @NgModule({
@@ -46,7 +48,9 @@ import firebase from "firebase/compat";
     MatNativeDateModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    MatProgressBarModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

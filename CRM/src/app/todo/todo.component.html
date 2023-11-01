@@ -1,1 +1,18 @@
-<p>todo works!</p>
+<mat-card class="todo-container">
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>ToDo</mat-label>
+    <textarea [(ngModel)]="todo.todo" matInput placeholder="ToDo..."></textarea>
+  </mat-form-field>
+  <button (click)="saveTodo()" class="add-user-btn" mat-mini-fab color="primary" matTooltip="Add ToDo">
+    <mat-icon>add</mat-icon>
+  </button>
+</mat-card>
+
+
+<mat-card *ngFor="let todo of allTodos; let i = index" class="todo">
+  {{todo.todo}}
+
+  <button (click)="deleteTodo(i)" class="delete-btn" mat-mini-fab color="warn">
+    <mat-icon>delete</mat-icon>
+  </button>
+</mat-card>

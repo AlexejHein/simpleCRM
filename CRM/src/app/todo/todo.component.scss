@@ -1,0 +1,17 @@
+.todo-container{
+  padding: 32px;
+  button{
+    position: absolute;
+    right: 32px;
+    bottom: 8px;
+  }
+}
+.todo{
+  padding: 18px;
+  margin: 18px;
+  .delete-btn{
+    position: absolute;
+    right: 12px;
+    bottom: 6px;
+  }
+}

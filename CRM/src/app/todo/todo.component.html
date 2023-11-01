@@ -10,7 +10,7 @@
 
 
 <mat-card *ngFor="let todo of allTodos; let i = index" class="todo">
-  {{todo.todo}}
+  <p> {{todo.todo}} </p>
 
   <button (click)="deleteTodo(i)" class="delete-btn" mat-mini-fab color="warn">
     <mat-icon>delete</mat-icon>

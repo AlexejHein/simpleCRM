@@ -1,5 +1,82 @@
-<mat-card class="inline-calendar-card">
+<div class="content pd-16">
+  <mat-card class="dashboardDescription">
+    <mat-card-header>
+      <mat-card-title>Sails</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-icon>attach_money</mat-icon>
+        <h2>3.345</h2>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="dashboardDescription success">
+    <mat-card-header>
+      <mat-card-title>Todos</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-icon>edit</mat-icon>
+      <h2>3</h2>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="dashboardDescription warning">
+    <mat-card-header>
+      <mat-card-title>Kunden</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-icon>groups</mat-icon>
+      <h2>23</h2>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="dashboardDescription worn">
+    <mat-card-header>
+      <mat-card-title>Rocket</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-icon>rocket_launch</mat-icon>
+      <h2>5</h2>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+<div class="charts pd-16">
+  <mat-card class="lChart">
+    <div id="divChart" class="pd-16 chartSails">
+      <canvas id="lineChart"></canvas>
+    </div>
+  </mat-card>
+  <mat-card class="dChart">
+    <div id="divChart" class="pd-16 chartSails">
+      <canvas id="doughnutChart"></canvas>
+    </div>
+  </mat-card>
+</div>
+
+<mat-card class="pd-16">
+  <mat-card class="cardPersons">
+    <mat-icon class="person">person</mat-icon>
+    <p>Alexej Hein</p>
+    <p>Email@aol.de</p>
+  </mat-card>
+  <mat-card class="cardPersons">
+    <mat-icon class="person">person</mat-icon>
+    <p>Alexej Hein</p>
+    <p>Email@aol.de</p>
+  </mat-card>
+  <mat-card class="cardPersons">
+    <mat-icon class="person">person</mat-icon>
+    <p>Alexej Hein</p>
+    <p>Email@aol.de</p>
+  </mat-card>
+  <mat-card class="cardPersons">
+    <mat-icon class="person">person</mat-icon>
+    <p>Alexej Hein</p>
+    <p>Email@aol.de</p>
+  </mat-card>
+
+</mat-card>
+<!--<mat-card class="inline-calendar-card">
   <mat-calendar [(selected)]="selected"></mat-calendar>
 </mat-card>
-<!--<p>Selected date: {{selected}}</p> -->
-
+<p>Selected date: {{selected}}</p> -->

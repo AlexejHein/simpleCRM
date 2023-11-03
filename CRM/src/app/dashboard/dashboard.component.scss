@@ -1,6 +1,65 @@
-.inline-calendar-card{
-  width: 300px;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+.content{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .dashboardDescription{
+    width: 200px;
+    background-color: #3f51b5;
+    color: #fff;
+    mat-card-content{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+
+  .success{
+    background-color: #4caf50;
+  }
+  .warning{
+    background-color: #ff9800;
+  }
+  .worn{
+    background-color: #f44336;
+  }
 }
+
+.charts{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  .lChart{
+    width: 600px;
+    .chartSails{
+      width: auto;
+    }
+  }
+  .dChart{
+    max-width: 300px;
+    .chartSails{
+      width: auto;
+    }
+  }
+}
+.cardPersons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  .person{
+    background-color: #4caf50;
+    border-radius: 50%;
+    padding: 4px;
+    color: #fff;
+  }
+}
+
+
+

@@ -29,6 +29,7 @@ import {MatMenuModule} from "@angular/material/menu";
 import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
 import { TodoComponent } from './todo/todo.component';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { TodoComponent } from './todo/todo.component';
     AngularFireStorageModule,
     MatProgressBarModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -30,6 +30,7 @@ import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-ad
 import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
 import { TodoComponent } from './todo/todo.component';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     UserDetailComponent,
     DialogEditAddressComponent,
     DialogEditUserComponent,
-    TodoComponent
+    TodoComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,

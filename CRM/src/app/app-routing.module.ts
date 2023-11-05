@@ -4,13 +4,15 @@ import {DashboardComponent} from "./dashboard/dashboard.component";
 import {UserComponent} from "./user/user.component";
 import {UserDetailComponent} from "./user-detail/user-detail.component";
 import {TodoComponent} from "./todo/todo.component";
+import {CalendarComponent} from "./calendar/calendar.component";
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'user', component: UserComponent },
   { path: 'user/:id', component: UserDetailComponent },
-  { path: 'todo', component: TodoComponent }
+  { path: 'todo', component: TodoComponent },
+  { path: 'calendar', component: CalendarComponent }
 ];
 
 @NgModule({

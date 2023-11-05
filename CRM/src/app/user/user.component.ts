@@ -5,6 +5,7 @@ import {User} from "../../models/user.class";
 import firebase from "firebase/compat";
 import firestore = firebase.firestore;
 import {AngularFirestore} from "@angular/fire/compat/firestore";
+import {UserService} from "../services/user.service";
 
 @Component({
   selector: 'app-user',
@@ -17,7 +18,7 @@ export class UserComponent implements OnInit{
 
   allUsers: any[]= [];
 
-  constructor(public dialog: MatDialog, private firestore: AngularFirestore) { }
+  constructor(public dialog: MatDialog, private firestore: AngularFirestore, private userService: UserService) { }
 
   ngOnInit(): void {
     this.firestore
@@ -25,12 +26,8 @@ export class UserComponent implements OnInit{
       .valueChanges({idField: 'customIdName'})
       .subscribe((changes: any) => {
         this.allUsers = changes;
-        console.log(this.allUsers)
       });
-
   }
-
-
   openDialog(){
     this.dialog.open(DialogAddUserComponent);
   }

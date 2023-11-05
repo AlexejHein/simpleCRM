@@ -1,7 +1,7 @@
 <div class="content pd-16">
   <mat-card class="dashboardDescription">
     <mat-card-header>
-      <mat-card-title>Sails</mat-card-title>
+      <mat-card-title>Sales</mat-card-title>
     </mat-card-header>
     <mat-card-content>
         <mat-icon>attach_money</mat-icon>
@@ -9,25 +9,26 @@
     </mat-card-content>
   </mat-card>
 
-  <mat-card class="dashboardDescription success">
+  <mat-card routerLink="/todo" class="dashboardDescription success">
     <mat-card-header>
       <mat-card-title>Todos</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <mat-icon>edit</mat-icon>
-      <h2>3</h2>
+      <h2>{{ todos.length }}</h2>
     </mat-card-content>
   </mat-card>
 
-  <mat-card class="dashboardDescription warning">
+  <mat-card routerLink="/user" class="dashboardDescription warning">
     <mat-card-header>
-      <mat-card-title>Kunden</mat-card-title>
+      <mat-card-title>Customers</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <mat-icon>groups</mat-icon>
-      <h2>23</h2>
+      <h2>{{ users.length }}</h2>
     </mat-card-content>
   </mat-card>
+
   <mat-card class="dashboardDescription worn">
     <mat-card-header>
       <mat-card-title>Rocket</mat-card-title>
@@ -50,6 +51,9 @@
     <div id="divChart" class="pd-16 chartSails">
       <canvas id="doughnutChart"></canvas>
     </div>
+  </mat-card>
+  <mat-card class="inline-calendar-card">
+    <mat-calendar [(selected)]="selected"></mat-calendar>
   </mat-card>
 </div>
 
